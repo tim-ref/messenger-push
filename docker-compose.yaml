@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  matrix-go-push:
+    build: .
+    ports:
+      - "8080:8080"
+    command: ./matrix-go-push -config "config/config.yaml"
+    volumes:
+      - type: bind
+        source: config/config.yaml
+        target: /config/config.yaml
+      - type: bind
+        source: develop/serviceAccountKey.json
+        target: /develop/serviceAccountKey.json

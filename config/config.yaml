@@ -1,0 +1,11 @@
+Server:
+  Host: 0.0.0.0
+  Port: 8080
+  Timeout:
+    Server: 30s
+    Read: 15s
+    Write: 15s
+    Idle: 5s
+
+Clients:
+  - de.test.timref.messengerclient
